@@ -1,4 +1,5 @@
-//将一身高用英尺（feet）和英寸（inch）表示
+//将一身高(单位为英寸)用英尺（feet）和英寸（inch）表示
+
 #include<iostream>
 using namespace std;
 
