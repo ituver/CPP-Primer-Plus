@@ -1,0 +1,32 @@
+/*计算体重指数*/
+
+#include<iostream>
+using namespace std;
+const int inch_per_feet = 12;
+const double meter_per_inch = 0.0254;
+const double pound_per_kilogram = 2.2; 
+
+int main()
+{
+	cout<<"Please enter your height:"<<endl;
+	cout<<"First,enter your height of feet part(请输入你身高的英尺部分):_\b";
+	int ht_feet;
+	cin>>ht_feet;
+	cout<<"Second,enter your height of inch part(请输入身高的英寸部分):_\b";
+	int ht_inch;
+	cin>>ht_inch;
+	cout<<"Now,please enter your weight in pound:";
+	double wt_pound;
+	cin>>wt_pound;
+	
+	int inch;
+	inch=ht_feet*inch_per_feet + ht_inch;
+	double ht_meter;
+	ht_meter = inch*meter_per_inch;
+	double wt_kilogram;
+	wt_kilogram = wt_pound/pound_per_kilogram;
+	double BMI;
+	BMI = wt_kilogram/(ht_meter*ht_meter);
+	cout<<"Your body mass inde is "<<BMI<<endl; 
+	return 0;
+}
